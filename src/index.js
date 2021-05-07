@@ -1,13 +1,15 @@
 
-const qrCode = require('qrCode');
-const Utils = require('../lib/styleUtils');
+const dataURL = require('../renderer/dataUrl');
 
-exports.toDataURL = function toDataURL (payload, opts, cb) {
+exports.toDataURL = function toDataURL(payload, opts) {
 
-    const optsRaw = Utils.convertOptsToRaw(opts)
-    const rawQRCode = qrCode.create(payload, optsRaw, cb)
-    const input = Utils.getStyleInfo(rawQRCode, opts);
-    const res = Utils.qrToImageData(input)
+    return new Promise((resolve, reject) => {
+        
+        const asyncHelper = (err, val) => {
+            if (err) return reject(err); 
+            return resolve(val);
+        }
+        dataURL.render(payload, opts, asyncHelper)
+    });
 
-    return res;
 }

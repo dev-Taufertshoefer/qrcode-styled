@@ -1,21 +1,22 @@
 const PNG = require('pngjs').PNG
-const Utils = require('./utils')
+const StyleUtils = require('../lib/styleUtils');
 
-exports.render = function render (qrData, styledOpts) {
+exports.render = function render (allInfos) {
 
   const pngOpts = allInfos.rendererOpts
-  const width = alllInfos.width;
+  const width = allInfos.width;
   const margin = allInfos.margin;
   const scale = allInfos.scale;
 
-  const size = Utils.getImageWidth(allInfos.size, width, margin, scale)
-  // const size = Utils.getImageWidth(qrData.modules.size, opts)
+  const size = StyleUtils.getImageWidth(allInfos.size, width, margin, scale)
 
-  pngOpts.width = size
-  pngOpts.height = size
+  pngOpts.width = size;
+  pngOpts.height = size;
 
   const pngImage = new PNG(pngOpts)
-  const imgData = Utils.qrToImageData(pngImage.data, styledOpts)
+  
+  StyleUtils.styleImageData(pngImage.data, allInfos)
 
-  return imgData
+  return pngImage;
 }
+
