@@ -6,9 +6,9 @@
 
 # General Description
 
-This library is based on [node-qrcode](https://www.npmjs.com/package/qrcode) with different options aiming to modify the QR codes's style. Number and type of output formats stay provided.
+This library is based on [node-qrcode](https://www.npmjs.com/package/qrcode) with different options aiming to modify the QR codes's style.
 
-Please see the docs of node-qrcode for QR code related options (like mask pattern, QR code version etc.). The options described here only reference styling paremeters.
+Please see the docs of [node-qrcode](https://www.npmjs.com/package/qrcode) for QR code related options (like mask pattern, QR code version etc.). The options described here only reference styling paremeters.
 
 # Usage
 
@@ -24,8 +24,8 @@ Please see the docs of node-qrcode for QR code related options (like mask patter
 ### Modules
 
 There are two styling dimensions for modules:
-* Shape of modules, defined by `type` key
-* Color of modules, defined by `colordark` and `colorlight` keys
+* `type`: Modifies shape of modules
+* `colordark` and `colorlight`: Modify color of modules. `colordark` refers to the module color `colorlight` to the background. 
 
 ```typescript 
     const opts = {
@@ -37,10 +37,10 @@ There are two styling dimensions for modules:
     }
 ```
 
-`type`: \<string\>. Possible values: `'square'`, `'rounded'`. Default: `'square'`
-`colordark`: \<string\>. Possible values: Hexadecimal color codes. Default: `'#000000'`
+* `type`: \<string\>. Possible values: `'square'`, `'rounded'`. Default: `'square'`
+* `colordark`: \<string\>. Possible values: Hexadecimal color codes. Default: `'#000000'`
     Module color
-`colorlight`: \<string\>. Possible values: Hexadecimal color codes. Default: `'#ffffff'`
+* `colorlight`: \<string\>. Possible values: Hexadecimal color codes. Default: `'#ffffff'`
     Background color
 
 Note: If you don't choose white as background, or background and module color only differ slightly, please test the QR code for usability.
@@ -52,9 +52,9 @@ Note: If you don't choose white as background, or background and module color on
     const opts = {
         moduleStyle: {},
         positionMarker: {
-            squareType: 'none', // 'rounded','square', 'none'
+            squareType: 'none',
             squareColor: '#7826E1',
-            innerType: 'square', // 'dot', 'square', 'none'
+            innerType: 'square',
             innerColor: '#19DE7F'
           },
     }
@@ -150,7 +150,7 @@ See [node-qrcode](https://www.npmjs.com/package/qrcode#qr-code-options). All opt
     }
 ```
 
-If you are using Typescript, please add
+<!-- If you are using Typescript, please add
 
 ```javascript
     "qrcode-styled": [
@@ -158,7 +158,7 @@ If you are using Typescript, please add
     ],
 
 ```
-to your `paths` key in `tsconfig.json`.
+to your `paths` key in `tsconfig.json`. -->
 
 # License
 
@@ -171,5 +171,6 @@ Upcoming features:
 * `positionMarker.squareType = 'rounded'`
 * `positionMarker.innerType = 'dot'`
 * `moduleStyle.type = 'star'`
+* Add output types as provided in node-qrcode
 
 This project is not yet suitable for integration. Not typed.
