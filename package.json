@@ -21,7 +21,8 @@
   "license": "MIT",
   "dependencies": {
     "pngjs": "^3.4.0",
-    "qrcode": "^1.4.4"
+    "qrcode": "^1.4.4",
+    "sharp": "^0.28.2"
   },
   "engines": {
     "node": ">=10.13.0"

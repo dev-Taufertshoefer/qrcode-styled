@@ -24,8 +24,8 @@ Please see the docs of node-qrcode for QR code related options (like mask patter
 ### Modules
 
 There are two styling dimensions for modules:
-    * Shape of modules, defined by `type` key
-    * Color of modules, defined by `colordark` and `colorlight` keys
+* Shape of modules, defined by `type` key
+* Color of modules, defined by `colordark` and `colorlight` keys
 
 ```typescript 
     const opts = {
@@ -60,14 +60,31 @@ Note: If you don't choose white as background, or background and module color on
     }
 ```
 
-`squareType`: \<string\>. Possible values: `'none'`, `'square'`. Default: `'none'`
+* `squareType`: \<string\>. Possible values: `'none'`, `'square'`. Default: `'none'`
     Type of the outer position marker frame
-`innerType`: \<string\>. Possible values: `'none'`, `'square'`. Default: `'none'`
+* `innerType`: \<string\>. Possible values: `'none'`, `'square'`. Default: `'none'`
     Type of the inner area of the position marker
-`squareColor`, `innerColor`: \<string\>. Possible values: `'none'`, `'square'`. Default: `'none'`
+* `squareColor`, `innerColor`: \<string\>. Possible values: `'none'`, `'square'`. Default: `'none'`
 
 Note: If `moduleStyle.type = 'square'` there will be no difference between `positionMarker.squareType = 'none'` and `positionMarker.squareType = 'square'`. The same holds for `positionMarker.innerType` option.
 
+<!-- ### Add an image
+
+```typescript
+    const opts = {
+        moduleStyle: {},
+        positionMarker: {},
+        image: 'src/assets/image.svg',
+    }
+```
+
+* With the image key, provide a path starting with the directory on the `nodes_modules` level. Path may have `/` or not. 
+
+* You have to provide the file format suffix. You can provide the file in the following formats:
+    | Image format |
+    | ------------ |
+    |     .svg     | -->
+    
 
 ## Global options
 
@@ -150,9 +167,9 @@ to your `paths` key in `tsconfig.json`.
 # Project Status
 
 Upcoming features:
-    *  insert image
-    * `positionMarker.squareType = 'rounded'`
-    * `positionMarker.innerType = 'dot'`
-    * `moduleStyle.type = 'star'`
+*  insert image
+* `positionMarker.squareType = 'rounded'`
+* `positionMarker.innerType = 'dot'`
+* `moduleStyle.type = 'star'`
 
 This project is not yet suitable for integration. Not typed.
