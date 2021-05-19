@@ -1,4 +1,4 @@
-const qrCode = require('qrCode');
+const qrCode = require('qrcode');
 
 const Utils = require('../lib/styleUtils');
 const pngRender = require('../renderer/png');

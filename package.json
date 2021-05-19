@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "Style qrcodes based on node-qrcode.",
   "author": "Anne Taufertshöfer <dev.taufertshoefer@gmail.com>",
-  "homepage": "",
   "main": "src/index.js",
   "scripts": {
     "test": "npm run lint && node --throw-deprecation test.js",

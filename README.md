@@ -96,7 +96,7 @@ See [node-qrcode](https://www.npmjs.com/package/qrcode#qr-code-options). All opt
 
 
 
-## NestJS expamle:
+## NestJS expample:
 ```typescript
     import { toDataURL } from 'qrcode-styled';
 
@@ -110,7 +110,7 @@ See [node-qrcode](https://www.npmjs.com/package/qrcode#qr-code-options). All opt
                 moduleStyle: {
                     type: 'square',
                     colordark: '#0D406C', 
-                    colorlight: '#ffffffff'
+                    colorlight: '#ffffff'
                 },
                 positionMarker: {
                     squareType: 'none',

@@ -14,7 +14,6 @@ exports.render = function render (allInfos) {
   pngOpts.height = size;
 
   const pngImage = new PNG(pngOpts)
-  
   StyleUtils.styleImageData(pngImage.data, allInfos)
 
   return pngImage;
