@@ -14,10 +14,10 @@ Please see the docs of [node-qrcode](https://www.npmjs.com/package/qrcode) for Q
 
 ### `toDataURL(payload, [options], [cb(error, url)]`
 
-`toDataURL()`: \<Promise\>
-`payload`: \<string\>.
-`options`: {}. See [Styling](##Styling).
-`cb()`: Callback function. 
+* `toDataURL()`: \<Promise\>
+* `payload`: \<string\>.
+* `options`: {}. See [Styling](##Styling).
+* `cb()`: Callback function. 
 
 ## Styling
 
