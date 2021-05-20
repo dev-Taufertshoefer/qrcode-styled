@@ -1,7 +1,8 @@
 const PNG = require('pngjs').PNG
 const StyleUtils = require('../lib/styleUtils');
+const ImgStyling = require('../lib/imgStyling');
 
-exports.render = function render (allInfos) {
+exports.render = async function render (allInfos) {
 
   const pngOpts = allInfos.rendererOpts
   const width = allInfos.width;
@@ -14,7 +15,11 @@ exports.render = function render (allInfos) {
   pngOpts.height = size;
 
   const pngImage = new PNG(pngOpts)
-  StyleUtils.styleImageData(pngImage.data, allInfos)
+  StyleUtils.styleData(pngImage.data, allInfos);
+
+  if (allInfos.image) {
+    pngImage.data = await ImgStyling.insertImage(pngImage.data, allInfos);
+  }
 
   return pngImage;
 }

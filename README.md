@@ -68,7 +68,7 @@ Note: If you don't choose white as background, or background and module color on
 
 Note: If `moduleStyle.type = 'square'` there will be no difference between `positionMarker.squareType = 'none'` and `positionMarker.squareType = 'square'`. The same holds for `positionMarker.innerType` option.
 
-<!-- ### Add an image
+### Add an image
 
 ```typescript
     const opts = {
@@ -78,12 +78,12 @@ Note: If `moduleStyle.type = 'square'` there will be no difference between `posi
     }
 ```
 
-* With the image key, provide a path starting with the directory on the `nodes_modules` level. Path may have `/` or not. 
+* With the image key, provide a path starting with the directory on the `nodes_modules` level where you placed the image you want to insert into the QR code's center. 
 
 * You have to provide the file format suffix. You can provide the file in the following formats:
     | Image format |
     | ------------ |
-    |     .svg     | -->
+    |     .svg     |
     
 
 ## Global options
@@ -167,7 +167,7 @@ to your `paths` key in `tsconfig.json`. -->
 # Project Status
 
 Upcoming features:
-*  insert image
+* provide more image formats
 * `positionMarker.squareType = 'rounded'`
 * `positionMarker.innerType = 'dot'`
 * `moduleStyle.type = 'star'`
